@@ -1,0 +1,25 @@
+{
+    "name": "dogescript",
+    "displayName": "DogeScript",
+    "description": "Dogescript language support",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.57.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "djs",
+            "aliases": ["Dogescript", "djs"],
+            "extensions": [".djs"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "djs",
+            "scopeName": "source.djs",
+            "path": "./syntaxes/djs.tmLanguage.json"
+        }]
+    }
+}

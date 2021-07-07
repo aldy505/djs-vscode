@@ -1,0 +1,81 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Dogescript",
+	"scopeName": "source.djs",
+	"fileTypes": ["djs"],
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.djs",
+					"match": "\\b(wow|much|dose|with|plz|lazy|amaze|classy|maker|grows|sooper)\\b"
+				},
+				{
+					"name": "keyword.control.djs",
+					"match": "\\b(notrly|but|but rly|rly)\\b"
+				},
+				{
+					"name": "comment.line.djs",
+					"begin": "\\b(shh)",
+					"end": "\\n"
+				},
+				{
+					"name": "comment.block.djs",
+					"begin": "\\b(quiet)",
+					"end": "loud"
+				},
+				{
+					"name": "support.function.djs",
+					"match": "\\b(asink such|such)\\b"
+				},
+				{
+					"name": "support.variable.djs",
+					"match": "\\b(very)"
+				},
+				{
+					"name": "support.class.djs", 
+					"match": "classy"
+				},
+				{
+					"name": "variable.parameter.djs",
+					"match": "\\b(is)\\b"
+				},
+				{
+					"name": "support.variable",
+					"match": "very",
+					"captures": {
+						"1": {
+							"name": "variable.name.djs"
+							
+						},
+						"2": {
+							"name": "variable.other.djs"
+						}
+					}
+				},
+				{
+					"name": "keyword.operator.djs"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.djs",
+			"begin": "('|\")",
+			"end": "('|\")",
+			"patterns": [
+				{
+					"name": "constant.character.escape.djs",
+					"match": "\\\\."
+				}
+			]
+		}
+	}
+}
